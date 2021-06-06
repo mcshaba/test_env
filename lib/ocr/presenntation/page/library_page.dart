@@ -148,6 +148,7 @@ class _LibraryPageState extends State<LibraryPage>
             onDismissed: (direction) {
               _ocrBloc.add(DeleteEvent(item));
               _savedOcrModel.removeAt(index);
+              _ocrBloc.add(GetSavedEvent());
             },
           );
         },
