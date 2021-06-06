@@ -69,19 +69,13 @@ class _MyTabbedPageState extends State<MyTabbedPage>
             ),
           ),
           body:  TabBarView(
-            physics: NeverScrollableScrollPhysics(),
+            // physics: NeverScrollableScrollPhysics(),
             key: RIKeys.riKey1,
             controller: tabController,
             children: _pages.map((Widget tab) {
               return tab;
             }).toList(),
           ),
-          // floatingActionButton: new FloatingActionButton(
-          //   onPressed: () =>
-          //       tabController.animateTo((tabController.index + 1) % 2),
-          //   // Switch tabs
-          //   child: new Icon(Icons.swap_horiz),
-          // ),
         ),
       ),
     );
