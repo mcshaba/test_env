@@ -56,13 +56,13 @@ class _MyTabbedPageState extends State<MyTabbedPage>
         return true;
       },
       child: DefaultTabController(
-        length: 2,
+        length: myTabs.length,
         child: Scaffold(
           appBar: AppBar(
             title: TabBar(
               controller: tabController,
               tabs: myTabs,
-              indicatorWeight: 5,
+              indicatorWeight: 3,
               indicatorColor: Colors.white,
               labelColor: Colors.white,
 
