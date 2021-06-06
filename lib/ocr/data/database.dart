@@ -6,7 +6,7 @@ import 'package:sembast/sembast_io.dart';
 
 import 'model/save_ocr.dart';
 
-class SembastDb {
+class LocalOCRDb {
   /// File path to a file in the current directory
   DatabaseFactory dbFactory = databaseFactoryIo;
 
@@ -16,12 +16,12 @@ class SembastDb {
   final store = intMapStoreFactory.store('ocr_table');
 
 
-  static SembastDb _singleton = SembastDb._internal();
+  static LocalOCRDb _singleton = LocalOCRDb._internal();
 
-  factory SembastDb(){
+  factory LocalOCRDb(){
     return _singleton;
   }
-  SembastDb._internal();
+  LocalOCRDb._internal();
 
   Future<Database> init() async {
     if(_db == null){
@@ -87,4 +87,4 @@ class SembastDb {
   }
 }
 
-SembastDb db = SembastDb();
+LocalOCRDb db = LocalOCRDb();

@@ -7,21 +7,7 @@ class AppLanguage {
   ///List Language support in Application
   static List<Locale> supportLanguage = [
     Locale("en"),
-    Locale("vi"),
-    Locale("ar"),
-    Locale("da"),
-    Locale("de"),
-    Locale("el"),
-    Locale("fr"),
-    Locale("he"),
-    Locale("id"),
-    Locale("ja"),
-    Locale("ko"),
-    Locale("lo"),
-    Locale("nl"),
-    Locale("zh"),
-    Locale("fa"),
-    Locale("km"),
+
   ];
 
   ///Singleton factory

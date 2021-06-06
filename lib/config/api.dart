@@ -3,13 +3,13 @@ import 'dart:io';
 
 import 'package:dio/dio.dart';
 import 'package:envision_test/config/http_manager.dart';
-import 'package:envision_test/ocr/domain/ocr_model.dart';
+import 'package:envision_test/ocr/data/model/ocr_model.dart';
 
 class Api {
   ///URL API
   static const String OCR = "/readDocument";
 
-  ///Login api
+  ///OCR Generator api
   static Future<dynamic> ocrGenerator({File file}) async {
     String fileName = file.path.split('/').last;
     FormData formData = FormData.fromMap({

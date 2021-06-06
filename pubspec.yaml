@@ -96,22 +96,7 @@ flutter:
     - assets/icons/CustomIcons.ttf
     - assets/images/logo.png
     - assets/images/splash.png
-    - assets/locale/ar.json
-    - assets/locale/da.json
-    - assets/locale/de.json
-    - assets/locale/el.json
     - assets/locale/en.json
-    - assets/locale/fa.json
-    - assets/locale/fr.json
-    - assets/locale/he.json
-    - assets/locale/id.json
-    - assets/locale/ja.json
-    - assets/locale/km.json
-    - assets/locale/ko.json
-    - assets/locale/lo.json
-    - assets/locale/nl.json
-    - assets/locale/vi.json
-    - assets/locale/zh.json
   fonts:
     - family: Roboto
       fonts:

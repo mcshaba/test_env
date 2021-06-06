@@ -7,8 +7,6 @@ import 'package:envision_test/ocr/data/model/save_ocr.dart';
 
 class OCRRepository {
 
-
-
   ///Get all saved event
   static Future<dynamic> getEvent() async {
     final result = await db.getEventFromDb();

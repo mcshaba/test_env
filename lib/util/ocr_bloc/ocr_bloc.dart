@@ -2,7 +2,7 @@ import 'dart:async';
 
 import 'package:bloc/bloc.dart';
 import 'package:envision_test/ocr/data/model/save_ocr.dart';
-import 'package:envision_test/ocr/domain/ocr_model.dart';
+import 'package:envision_test/ocr/data/model/ocr_model.dart';
 import 'package:envision_test/ocr/domain/repository/ocr_repository.dart';
 import 'package:equatable/equatable.dart';
 
