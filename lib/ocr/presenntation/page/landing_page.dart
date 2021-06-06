@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-import 'ocr/presenntation/page/camera_page.dart';
-import 'ocr/presenntation/page/library_page.dart';
+import 'camera_page.dart';
+import 'library_page.dart';
 
 class MyTabbedPage extends StatefulWidget {
   const MyTabbedPage({Key key}) : super(key: key);

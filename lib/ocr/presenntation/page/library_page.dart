@@ -22,7 +22,6 @@ class _LibraryPageState extends State<LibraryPage>
   GetOCRBloc _ocrBloc;
   final _controller = RefreshController(initialRefresh: false);
   List<SaveOcrModel> _savedOcrModel;
-  List<SaveOcrModel> _sortedOcrModel;
   final _scrollController = ScrollController();
   int _indexTab = 0;
   final _tabController = ScrollController();
@@ -34,8 +33,6 @@ class _LibraryPageState extends State<LibraryPage>
     WidgetsBinding.instance.addObserver(this);
 
     _scrollController.addListener(_scrollListener);
-    // _ocrBloc = BlocProvider.of<GetOCRBloc>(context);
-
     _ocrBloc = GetOCRBloc(GetOCRInitial());
     _ocrBloc.add(GetSavedEvent());
   }
@@ -63,7 +60,6 @@ class _LibraryPageState extends State<LibraryPage>
 
   ///ScrollListenerEvent
   void _scrollListener() {
-    // if (_homePage?.listTab != null) {
     int activeTab = 0;
     double offsetTab;
     double widthDevice = MediaQuery.of(context).size.width;
@@ -157,18 +153,6 @@ class _LibraryPageState extends State<LibraryPage>
         },
         itemCount: _savedOcrModel == null ? 0 : _savedOcrModel.length,
         onReorder: (oldIndex, newIndex) {
-          // final CreateEventModel item = _eventModel[oldIndex];
-          // if(oldIndex > newIndex){
-          //    _eventBloc.add(UpdatePosition(true, newIndex, oldIndex));
-          // } else if(oldIndex < newIndex){
-          //   newIndex -= 1;
-          //    _eventBloc.add(UpdatePosition(false, oldIndex, newIndex));
-          //
-          // }
-          // item.id = newIndex;
-          // _eventBloc.add(UpdateEvent(item));
-          //
-          // _eventBloc.add(GetSavedEvent());
         });
   }
 
@@ -218,17 +202,28 @@ class _LibraryPageState extends State<LibraryPage>
                 }
                 if (state is EventListSuccessful) {
                   _savedOcrModel = state.response;
+                  if(state.response.length == 0){
+                   return buildEmptyContainer();
+                  }
                   _savedOcrModel = _savedOcrModel.reversed.toList();
                   return _buildList();
                 }
-                if (state is EventSavedSuccessful) {
-                  Navigator.pop(context);
+                if (state is GetOCRInitial) {
+                  return buildEmptyContainer();
                 }
                 return _buildList();
               },
             ),
           ),
         ),
+      ),
+    );
+  }
+
+  Widget buildEmptyContainer(){
+    return Center(
+      child: Container(
+        child: Center(child: Text("Your library is currently empty, \nSwipe left to use the beauty of Envision OCR Library", textAlign: TextAlign.center, style: TextStyle(fontSize: 16, fontFamily: "Roboto"),)),
       ),
     );
   }

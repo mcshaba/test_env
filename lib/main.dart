@@ -8,7 +8,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:get/get_navigation/src/root/get_material_app.dart';
 
-import 'landing_page.dart';
+import 'ocr/presenntation/page/landing_page.dart';
 
 Future<void> main() async {
   runZonedGuarded(() async {
