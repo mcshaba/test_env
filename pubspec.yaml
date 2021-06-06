@@ -1,0 +1,130 @@
+name: envision_test
+description: A new Flutter application.
+
+# The following line prevents the package from being accidentally published to
+# pub.dev using `pub publish`. This is preferred for private packages.
+publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+
+# The following defines the version and build number for your application.
+# A version number is three numbers separated by dots, like 1.2.43
+# followed by an optional build number separated by a +.
+# Both the version and the builder number may be overridden in flutter
+# build by specifying --build-name and --build-number, respectively.
+# In Android, build-name is used as versionName while build-number used as versionCode.
+# Read more about Android versioning at https://developer.android.com/studio/publish/versioning
+# In iOS, build-name is used as CFBundleShortVersionString while build-number used as CFBundleVersion.
+# Read more about iOS versioning at
+# https://developer.apple.com/library/archive/documentation/General/Reference/InfoPlistKeyReference/Articles/CoreFoundationKeys.html
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.7.0 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_localizations:
+    sdk: flutter
+
+  # The following adds the Cupertino Icons font to your application.
+  # Use with the CupertinoIcons class for iOS style icons.
+  cupertino_icons: ^1.0.2
+
+  get: ^4.1.2
+  smooth_page_indicator: ^0.3.0-nullsafety.0
+  flutter_svg: ^0.21.0-nullsafety.0
+  lottie: ^1.0.1
+  shared_preferences: ^2.0.5
+  bloc: ^7.0.0
+  flutter_bloc: ^7.0.0
+  dio: ^4.0.0
+  shimmer: ^1.1.2
+  pull_to_refresh: ^1.6.4
+  animations: ^1.1.2
+  meta: ^1.3.0
+  file_picker:
+  sembast: ^3.0.4
+  path_provider: ^2.0.2
+  equatable: ^2.0.0
+  camera:
+  path:
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_native_splash: ^1.1.8+4
+  flutter_launcher_icons: ^0.9.0
+
+
+flutter_native_splash:
+  image: assets/images/splash.png
+  color: FAFAFA
+  ios: false
+#  fill: true FFE996
+
+
+flutter_icons:
+  android: "launcher_icon"
+  ios: true
+  image_path: "assets/images/logo.png"
+  adaptive_icon_background: "#FAFAFA"
+  remove_alpha_ios: true
+
+# For information on the generic Dart part of this file, see the
+# following page: https://dart.dev/tools/pub/pubspec
+
+# The following section is specific to Flutter.
+flutter:
+
+  # The following line ensures that the Material Icons font is
+  # included with your application, so that you can use the icons in
+  # the material Icons class.
+  uses-material-design: true
+  assets:
+    - assets/fonts/Roboto_Black.ttf
+    - assets/fonts/Roboto_BlackItalic.ttf
+    - assets/fonts/Roboto_Bold.ttf
+    - assets/fonts/Roboto_BoldItalic.ttf
+    - assets/fonts/Roboto_Italic.ttf
+    - assets/fonts/Roboto_Light.ttf
+    - assets/fonts/Roboto_LightItalic.ttf
+    - assets/fonts/Roboto_Medium.ttf
+    - assets/fonts/Roboto_MediumItalic.ttf
+    - assets/fonts/Roboto_Regular.ttf
+    - assets/fonts/Roboto_Thin.ttf
+    - assets/fonts/Roboto_ThinItalic.ttf
+    - assets/icons/CustomIcons.ttf
+    - assets/images/logo.png
+    - assets/images/splash.png
+    - assets/locale/ar.json
+    - assets/locale/da.json
+    - assets/locale/de.json
+    - assets/locale/el.json
+    - assets/locale/en.json
+    - assets/locale/fa.json
+    - assets/locale/fr.json
+    - assets/locale/he.json
+    - assets/locale/id.json
+    - assets/locale/ja.json
+    - assets/locale/km.json
+    - assets/locale/ko.json
+    - assets/locale/lo.json
+    - assets/locale/nl.json
+    - assets/locale/vi.json
+    - assets/locale/zh.json
+  fonts:
+    - family: Roboto
+      fonts:
+        - asset: assets/fonts/Roboto_Black.ttf
+        - asset: assets/fonts/Roboto_BlackItalic.ttf
+        - asset: assets/fonts/Roboto_Bold.ttf
+        - asset: assets/fonts/Roboto_BoldItalic.ttf
+        - asset: assets/fonts/Roboto_Italic.ttf
+        - asset: assets/fonts/Roboto_Light.ttf
+        - asset: assets/fonts/Roboto_LightItalic.ttf
+        - asset: assets/fonts/Roboto_Medium.ttf
+        - asset: assets/fonts/Roboto_MediumItalic.ttf
+        - asset: assets/fonts/Roboto_Regular.ttf
+        - asset: assets/fonts/Roboto_Thin.ttf
+        - asset: assets/fonts/Roboto_ThinItalic.ttf
+
