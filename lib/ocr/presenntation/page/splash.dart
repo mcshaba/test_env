@@ -75,6 +75,7 @@ class _WelcomeState extends State<WelcomePage>
                   ),
                 ),
               ),
+              SizedBox(height: 30,),
               FadingSlidingWidget(
                 animationController: _animationController,
                 interval: const Interval(0.5, 0.9),
